@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Treinaimage.pngmento display grid</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: grid;
+        grid-gap: 15px;
+
+        grid-template-columns: 1fr 20%;
+        grid-template-rows: 15%  1fr 30%;
+        grid-template-areas: 
+          "rodape rodape"
+          "sidebar topo" 
+          "principal topo";
+
+        height: calc(100vh - 16px);
+        font-family: sans-serif;
+      }
+      div {
+        border: 2px solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+      }
+      #header {
+        grid-area: topo;
+        background-color: #87dedc;
+        color: #0a5e5c;
+        border-color: #0a5e5c;
+      }
+      #main {
+        grid-area: principal;
+        background-color: #ffb6cf;
+        color: #e91e63;
+        border-color: #e91e63;
+      }
+      #asside {
+        grid-area: sidebar;
+        background-color: #fcffc4;
+        color: #99781e;
+        border-color: #99781e;
+      }
+      #footer {
+        grid-area: rodape;
+        background-color: #d5bff5;
+        color: #673ab7;
+        border-color: #673ab7;
+      }
+    </style>
+    <div id="header">TOPO</div>
+    <div id="main">PRINCIPAL</div>
+    <div id="asside">SIDEBAR</div>
+    <div id="footer">RODAPÉ</div>
+  </body>
+</html>
